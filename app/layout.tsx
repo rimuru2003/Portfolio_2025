@@ -1,3 +1,4 @@
+import CustomCursor from "../components/CustomCursor";
 import Navbar from "../components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   keywords: ["Aryan Singh", "Front-End Developer", "React Developer", "Next.js Portfolio"],
   authors: [{ name: "Aryan Singh" }],
   creator: "Aryan Singh",
-  metadataBase: new URL("https://dev-aryan.vercel.app"), 
+  metadataBase: new URL("https://dev-aryan.vercel.app"),
   openGraph: {
     title: "Aryan Singh | Front-End Developer",
     description: "Building modern and performant web applications.",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Aryan Singh Portfolio",
     images: [
       {
-        url: "/og-image.png", 
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Aryan Singh Portfolio",
@@ -36,11 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        
+        <CustomCursor />
+
         <Navbar />
         {children}
-        
-        </body>
+
+      </body>
     </html>
   );
 }
